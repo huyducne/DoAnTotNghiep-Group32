@@ -1,0 +1,257 @@
+﻿
+@font-face {
+    font-family: 'helveticaneue';
+    src: url('../fonts/helveticaneue.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Azedo-Bold';
+    src: url('../fonts/Azedo-Bold.otf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: helveticaneue;
+}
+
+.html {
+    font-size: 70.5%;
+    line-height: 1.6rem;
+    font-family: helveticaneue;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(241, 214, 5);
+}
+
+.header {
+    height: 62px;
+    background: rgb(88, 233, 21);
+    background: linear-gradient(90deg, rgba(88, 233, 21,1) 17%, rgb(241, 214, 5) 60%, rgba(138,186,175,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+    .header a {
+        text-decoration: none;
+        margin: auto 0;
+        color: #fff;
+        font-size: 30pt;
+        font-family: Azedo-Bold;
+        margin-left: 15px;
+        padding-bottom: 15px;
+    }
+
+
+    .header i {
+        color: #fff;
+        font-size: 28pt;
+        margin: auto 0;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+
+        .header i:hover {
+            color: #b6ff00;
+        }
+
+.main {
+    display: flex;
+    margin-top: 62px;
+}
+
+.nav-menu {
+    min-height: 1080px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+}
+
+    .nav-menu a {
+        font-size: 14pt;
+        text-decoration: none;
+        padding: 15px 30px;
+        color: rgba(6,80,62,1);
+    }
+
+        .nav-menu a:hover {
+            background: rgb(77,101,150);
+            background: linear-gradient(90deg, rgba(77,101,150,1) 9%, rgba(138,186,175,1) 77%);
+            color: #fff;
+        }
+
+    .nav-menu h3 {
+        padding: 20px 20px;
+        font-size: 18pt;
+    }
+
+.content {
+    width: calc(100% - 700px);
+    margin-left: 300px;
+    min-height: 1200px;
+    background-color: #ffc5f8;
+}
+
+.login-area {
+    background-color: #fff;
+    width: 400px;
+    position: fixed;
+    right: 0;
+    min-height: 1080px;
+}
+
+    .login-area form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .login-area h4 {
+        margin-top: 30px;
+        font-size: 14pt;
+    }
+
+.row {
+    margin-top: 20px;
+}
+.row h5,.row-check h5 {
+    font-size: 12pt;
+}
+
+.row-check {
+    display: flex;
+    margin-top: 10px;
+}
+
+    .row-check input {
+        margin: auto 10px auto 0;
+    }
+
+.row input {
+    width: calc(100% - 24px);
+    height: 30px;
+    padding-left: 20px;
+    font-weight:700;
+    font-size: 14px;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-login {
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size:13pt;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+
+.btn {
+    background: rgb(0,172,238);
+    background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+
+    .btn span {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .btn:before,
+    .btn:after {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 0;
+        background: rgba(2,126,251,1);
+        transition: all 0.3s ease;
+    }
+
+    .btn:before {
+        height: 0%;
+        width: 2px;
+    }
+
+    .btn:after {
+        width: 0%;
+        height: 2px;
+    }
+
+    .btn:hover {
+        background: transparent;
+        box-shadow: none;
+    }
+
+        .btn:hover:before {
+            height: 100%;
+        }
+
+        .btn:hover:after {
+            width: 100%;
+        }
+
+    .btn span:hover {
+        color: rgba(2,126,251,1);
+    }
+
+    .btn span:before,
+    .btn span:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        background: rgba(2,126,251,1);
+        transition: all 0.3s ease;
+    }
+
+    .btn span:before {
+        width: 2px;
+        height: 0%;
+    }
+
+    .btn span:after {
+        width: 0%;
+        height: 2px;
+    }
+
+    .btn span:hover:before {
+        height: 100%;
+    }
+
+    .btn span:hover:after {
+        width: 100%;
+    }

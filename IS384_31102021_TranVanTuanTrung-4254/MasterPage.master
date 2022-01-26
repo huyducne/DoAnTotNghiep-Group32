@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="header">
+        <a href="index.aspx">Đồng Hồ</a>
+        <i class="fas fa-shopping-cart"></i>
+    </div>
+
+    <div class="main">
+        <div class="nav-menu">
+            <h3 class="menu-item">Danh mục đồng hồ</h3>
+            <asp:Repeater ID="rptHangSX" runat="server" >
+                <ItemTemplate>
+                    <a class="menu-item" href="category.aspx?id=<%# Eval("MaNSX") %>"><%# Eval("TenHang") %></a>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+
+        <div class="content">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div class="login-area">
+            <form action="/" method="post">
+                <h4>Thông tin đăng nhập</h4>
+                <div class="row">
+                    <h5>Tên đăng nhập</h5>
+                    <input type="text" name="" value="" />
+                </div>
+                <div class="row">
+                    <h5>Mật khẩu</h5>
+                    <input type="password" name="" value="" />
+                </div>
+                <div class="row-check">
+                    <input type="checkbox" name="name" value="" />
+                    <h5>Nhớ mật khẩu</h5>
+                </div>
+                <div class="btn-login">
+                    <button type="button" class="custom-btn btn"><span>Đăng nhập</span></button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="footer">
+
+    </div>
+</body>
+</html>

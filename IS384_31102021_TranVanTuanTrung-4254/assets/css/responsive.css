@@ -1,0 +1,27 @@
+﻿@media only screen and (max-width : 1366px) {
+    .nav-menu {
+        width: 270px;
+    }
+
+    .content {
+        width: calc(100% - 620px);
+        margin-left: 270px;
+    }
+
+    .login-area {
+        width: 350px;
+    }
+
+    .product-item img{
+        width:150px;
+    }
+
+    .product-item div {
+        min-height: 250px;
+        margin: 0 auto;
+    }
+
+    .product-img img {
+        width:250px;
+    }
+}
